@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Sedang Dalam Perbaikan | Dedi Ir</title>
+    <meta name="description" content="Halaman maintenance sementara. Kami sedang melakukan peningkatan sistem untuk pengalaman yang lebih baik. Mohon kembali segera.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edu.abjad.eu.org">
+    <meta property="og:title" content="Sedang Dalam Perbaikan | Nama Website Anda">
+    <meta property="og:description" content="Halaman maintenance sementara. Kami sedang melakukan peningkatan sistem.">
+    <meta property="og:image" content="https://edu.abjad.eu.org"> <!-- Ganti dengan URL gambar preview Anda -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://edu.abjad.eu.org">
+    <meta property="twitter:title" content="Sedang Dalam Perbaikan | Nama Website Anda">
+    <meta property="twitter:description" content="Halaman maintenance sementara. Kami sedang melakukan peningkatan sistem.">
+    <meta property="twitter:image" content="https://edu.abjad.eu.org> <!-- Ganti dengan URL gambar preview Anda -->
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS Variables (Kustomisasi Mudah) --- */
+        :root {
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
+            --card-bg-opacity: 0.15;
+            --card-border-opacity: 0.2;
+            --text-color: #ffffff;
+            --heading-font-size: 2em;
+            --body-font-size: 1.1em;
+            --animation-duration-slow: 20s;
+            --animation-duration-fast: 2s;
+        }
+
+        /* --- Reset & Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            overflow: hidden;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        /* --- Animasi Latar Belakang --- */
+        .bg-bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float var(--animation-duration-slow) infinite ease-in-out;
+        }
+
+        .bg-bubble:nth-child(1) { width: 80px; height: 80px; top: 20%; left: 10%; animation-duration: 25s; }
+        .bg-bubble:nth-child(2) { width: 120px; height: 120px; top: 60%; right: 15%; animation-duration: 30s; animation-delay: 2s; }
+        .bg-bubble:nth-child(3) { width: 60px; height: 60px; bottom: 20%; left: 30%; animation-duration: 22s; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+            50% { transform: translateY(-100px) rotate(180deg); opacity: 0.8; }
+        }
+
+        /* --- Container Utama dengan Efek 3D --- */
+        .maintenance-container {
+            perspective: 1000px;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .maintenance-card {
+            background: rgba(255, 255, 255, var(--card-bg-opacity));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, var(--card-border-opacity));
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: rotateX(5deg) rotateY(-5deg);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .maintenance-card:hover {
+            transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5), inset 0 0 25px rgba(255, 255, 255, 0.15);
+        }
+
+        /* --- Ikon Gear yang Berputar --- */
+        .icon-wrapper {
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .icon-wrapper svg {
+            width: 80px;
+            height: 80px;
+            fill: var(--text-color);
+            animation: spin-pulse var(--animation-duration-fast) infinite linear;
+        }
+
+        @keyframes spin-pulse {
+            0% { transform: rotate(0deg) scale(1); opacity: 0.8; }
+            50% { transform: rotate(180deg) scale(1.1); opacity: 1; }
+            100% { transform: rotate(360deg) scale(1); opacity: 0.8; }
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: var(--heading-font-size);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: var(--body-font-size);
+            font-weight: 400;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        /* --- Progress Bar Animasi --- */
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ffffff, #f0f0f0);
+            border-radius: 3px;
+            animation: progress-load 4s infinite ease-out;
+        }
+
+        @keyframes progress-load {
+            0% { width: 0%; }
+            80% { width: 90%; } /* Tidak pernah 100% untuk efek loop yang mulus */
+            100% { width: 100%; }
+        }
+        
+        .progress-text {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* --- Footer Dinamis --- */
+        .card-footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            opacity: 0.6;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 600px) {
+            .maintenance-card {
+                padding: 30px 25px;
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            .maintenance-card:hover {
+                transform: scale(1.01);
+            }
+            h1 { font-size: 1.8em; }
+            p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Elemen Latar Belakang Animasi -->
+    <div class="bg-bubble"></div>
+    <div class="bg-bubble"></div>
+    <div class="bg-bubble"></div>
+
+    <div class="maintenance-container">
+        <main class="maintenance-card">
+            <header class="icon-wrapper">
+                <!-- Ikon SVG Gear -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                </svg>
+            </header>
+            
+            <section>
+                <h1>Sistem Sedang Diperbarui</h1>
+                <p>
+                    Kami sedang melakukan pemeliharaan untuk meningkatkan layanan. Proses ini hampir selesai, terima kasih atas kesabaran Anda.
+                </p>
+                
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <p class="progress-text">Memuat perbaikan...</p>
+            </section>
+
+            <footer class="card-footer">
+                <p>&copy; <span id="year"></span> Dedi Ir. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- SEO: Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Sedang Dalam Perbaikan | Dedi Ir",
+        "description": "Halaman maintenance sementara. Kami sedang melakukan peningkatan sistem untuk pengalaman yang lebih baik.",
+        "url": "https://edu.abjad.eu.org",
+        "inLanguage": "id-ID",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Dedi Ir",
+            "url": "https://edu.abjad.eu.org"
+        }
+    }
+    </script>
+
+    <!-- JavaScript Dinamis (Opsional) -->
+    <script>
+        // Update tahun secara otomatis di footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
